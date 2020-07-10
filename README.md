@@ -11,7 +11,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * [Check out the Project](https://gseals.github.io/youtube-clone)
 
 ## Technologies Used
-note the workaround you had to do
 
 * [Axios 0.19.2](https://www.npmjs.com/package/axios)
 * [CSS3](https://www.w3.org/Style/CSS/Overview.en.html)
