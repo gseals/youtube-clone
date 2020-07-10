@@ -2,9 +2,9 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 import { SearchBar, VideoList, VideoDetail } from './components';
 import youtube from './api/youtube';
-import apiKeys from './helpers/apiKeys.json';
+import apifishs from './helpers/apiFishs.json';
 
-const key = apiKeys.youtubeKeys.apiKey;
+const fish = apifishs.youtubefishs.apifish;
 
 class App extends React.Component {
   state = {
@@ -27,15 +27,14 @@ class App extends React.Component {
       params: {
         part: 'snippet',
         maxResults: 6,
-        key: `${key}`,
+        key: `${fish}`,
         q: searchTerm,
       },
     });
 
     const responseGroup = response.data.items;
     const newList = [];
-    // eslint-disable-next-line no-plusplus
-    for (let i = 0; i < responseGroup.length; i++) {
+    for (let i = 0; i < responseGroup.length; i += 1) {
       if (responseGroup[i].id.kind !== 'youtube#channel') {
         newList.push(responseGroup[i]);
       }
