@@ -9,8 +9,8 @@ class SearchBar extends React.Component {
 
   handleChange = (e) => {
     this.setState({
-      searchTerm: e.target.value
-    })
+      searchTerm: e.target.value,
+    });
   }
 
   handleSubmit = (e) => {
@@ -22,13 +22,13 @@ class SearchBar extends React.Component {
   }
 
   render() {
-  return (
+    return (
     <Paper elevation={6} style={{ padding: '25px' }}>
       <form onSubmit={this.handleSubmit}>
         <TextField fullWidth label="Search..." onChange={this.handleChange} />
       </form>
     </Paper>
-    )
+    );
   }
 }
 
