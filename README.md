@@ -12,6 +12,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Technologies Used
 
+complete this list
+add eslint
+note the workaround you had to do
+
 * [Axios 0.19.2](https://www.npmjs.com/package/axios)
 * [CSS3](https://www.w3.org/Style/CSS/Overview.en.html)
 * [ESLint 14.0.0](https://eslint.org/)
@@ -24,7 +28,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Screenshots
 
 ### Landing Page
-Landing Page
+![Landing Page]()
+
+### New Search Results
+![New Search Results]()
 
 
 ## How to Run
@@ -37,4 +44,7 @@ Landing Page
 
 [Gabriel Seals](https://github.com/gseals)
 
+## Notes
 * Review: another FANTASTIC tutorial.
+
+* The first result of the array that returns is the channel and the channel is not a video so it does not play. I worked around this issue by creating an empty array, for looping over the original response from youtube and, for each item whose id.kind was not youtube#channel, I pushed that into a new array and then setState to that new array. JS for the win!
