@@ -4,11 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Description
 
-* This application...
+* This application pulls data from the [YouTube API](https://developers.google.com/youtube/v3/getting-started) and, based on the code written, returns the top 5 results from the query. The code also allows an initial query to be returned in the ComponentDidMount and that result is set to 'nashville software school.'
 
 ## Demo Link
 
-* Check out the Project
+* [Check out the Project](https://gseals.github.io/youtube-clone)
 
 ## Technologies Used
 note the workaround you had to do
@@ -25,11 +25,10 @@ note the workaround you had to do
 ## Screenshots
 
 ### Landing Page
-![Landing Page]()
+![Landing Page](https://raw.githubusercontent.com/gseals/youtube-clone/master/screenshots/Landing%20Page.png)
 
 ### New Search Results
-![New Search Results]()
-
+![New Search Results](https://raw.githubusercontent.com/gseals/youtube-clone/master/screenshots/New%20Search%20Results.png)
 
 ## How to Run
 
