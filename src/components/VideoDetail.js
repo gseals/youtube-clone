@@ -2,9 +2,9 @@ import React from 'react';
 import { Paper, Typography } from '@material-ui/core';
 
 const VideoDetail = ({ video }) => {
-  if(!video) return <div>Loading...</div>
+  if (!video) return <div>Loading...</div>;
 
-  const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`
+  const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
 
   return (
     <React.Fragment>
@@ -22,7 +22,7 @@ const VideoDetail = ({ video }) => {
         <Typography variant="subtitle2">{video.snippet.description}</Typography>
       </Paper>
     </React.Fragment>
-  )
-}
+  );
+};
 
 export default VideoDetail;

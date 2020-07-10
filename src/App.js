@@ -13,37 +13,38 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.handleSubmit('nashville software school')
+    this.handleSubmit('nashville software school');
   }
-  
+
   onVideoSelect = (video) => {
     this.setState({
-      selectedVideo: video
-    })
+      selectedVideo: video,
+    });
   }
 
   handleSubmit = async (searchTerm) => {
     const response = await youtube.get('search', {
       params: {
         part: 'snippet',
-        maxResults: 6,
+        maxResults: 5,
         key: `${key}`,
         q: searchTerm,
-    }});
+      },
+    });
 
     const responseGroup = response.data.items;
     const newList = [];
-    for( let i = 0; i < responseGroup.length; i++) {
-    if(responseGroup[i].id.kind !== 'youtube#channel') {
-      newList.push(responseGroup[i])
+    // eslint-disable-next-line no-plusplus
+    for (let i = 0; i < responseGroup.length; i++) {
+      if (responseGroup[i].id.kind !== 'youtube#channel') {
+        newList.push(responseGroup[i]);
+      }
     }
+
+    this.setState({ videos: newList, selectedVideo: newList[0] });
   }
 
-    this.setState({ videos: newList, selectedVideo: newList[1] });
-  }
-
-  render () {
-
+  render() {
     const { selectedVideo, videos } = this.state;
 
     return (
@@ -62,7 +63,7 @@ class App extends React.Component {
           </Grid>
         </Grid>
       </Grid>
-    )
+    );
   }
 }
 
